@@ -46,9 +46,9 @@
       </a>
     </div>
     
-    <div class="slider-thumbnail">
+    <div  class="slider-thumbnail">
       <div v-for="(pic, i) in pictures" class="thumbnail-slide">
-        <img src="img/01.webp" alt="Slide 1">
+        <img :src="pic.image" :alt="pic.title">
       </div>
       
     </div>
