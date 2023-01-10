@@ -43,6 +43,9 @@ const app = Vue.createApp({
         if(this.curentIndex < 0 ){
           this.curentIndex = pictures.length-1;
         }
+      },
+      setCurrentIndex(index) {
+        this.currentIndex = index;
       }
     }
 });
