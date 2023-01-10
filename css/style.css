@@ -30,7 +30,7 @@
   /* CSS for the prev/next buttons */
   .slider-prev, .slider-next {
     position: absolute;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     font-size: 50px;
     color: white;
