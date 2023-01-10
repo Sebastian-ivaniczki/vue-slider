@@ -40,8 +40,8 @@ const app = Vue.createApp({
       },
       goToPrev(){
         this.curentIndex--;
-        if(this.curentIndex < pictures.length ){
-          this.curentIndex = 4;
+        if(this.curentIndex < 0 ){
+          this.curentIndex = pictures.length-1;
         }
       }
     }
