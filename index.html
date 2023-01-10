@@ -24,19 +24,35 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root" class="container d-flex justify-content-center align-items-center">
-          <i id="arrow-left" class="fa-solid fa-arrow-left"></i>
-          <div id="gallery"> 
-            
-            <img src="img/01.webp" alt="Marvel's Spiderman Miles Morale" class="active">
-            <div class="description active">
-              <h3>Marvel's Spiderman Miles Morale</h3>
-              <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</p>
-            </div>
-            
+  <div id="root">
+
+    <div v-for="(pic, i) in pictures">
+      <div  class="slider d-flex justify-content-center mt-4">
+        <div :class="['slide', {active : i === curentIndex}]">
+          <img :src="pic.image" :alt="pic.title">
+          <div class="slide-caption">
+            <h2> {{ pic.title }}</h2>
+            <p>{{ pic.text }}</p>
           </div>
-          <i id="arrow-right" class="fa-solid fa-arrow-right"></i>
+        </div>
+      
     </div>
+      
+      <a href="#" class="slider-prev">
+        <i class="fa fa-arrow-left"></i>
+      </a>
+      <a href="#" class="slider-next">
+        <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+    
+    <div class="slider-thumbnail">
+      <div v-for="(pic, i) in pictures" class="thumbnail-slide">
+        <img src="img/01.webp" alt="Slide 1">
+      </div>
+      
+    </div>
+  </div>
 </body>
 </html>
           
