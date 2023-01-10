@@ -30,6 +30,20 @@ const app = Vue.createApp({
           curentIndex: 0,
           pictures
         }
+    },
+    methods:{
+      goToNext(){
+        this.curentIndex++;
+        if(this.curentIndex > pictures.length -1){
+          this.curentIndex = 0;
+        }
+      },
+      goToPrev(){
+        this.curentIndex--;
+        if(this.curentIndex < pictures.length ){
+          this.curentIndex = 4;
+        }
+      }
     }
 });
 

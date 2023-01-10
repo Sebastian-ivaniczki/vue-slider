@@ -26,9 +26,9 @@
 <body>
   <div id="root">
 
-    <div v-for="(pic, i) in pictures">
+    <div>
       <div  class="slider d-flex justify-content-center mt-4">
-        <div :class="['slide', {active : i === curentIndex}]">
+        <div v-for="(pic, i) in pictures" :class="['slide', {active : i === curentIndex}]">
           <img :src="pic.image" :alt="pic.title">
           <div class="slide-caption">
             <h2> {{ pic.title }}</h2>
@@ -39,10 +39,10 @@
     </div>
       
       <a href="#" class="slider-prev">
-        <i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-left"  @click="goToPrev"></i>
       </a>
       <a href="#" class="slider-next">
-        <i class="fa fa-arrow-right"></i>
+        <i class="fa fa-arrow-right" @click="goToNext"></i>
       </a>
     </div>
     
