@@ -1,4 +1,4 @@
-//* array 
+
 const pictures = [
   {
     image: 'img/01.webp',
@@ -23,3 +23,14 @@ const pictures = [
   }
 ];
 
+
+const app = Vue.createApp({
+    data(){
+        return{
+          curentIndex: 0,
+          pictures
+        }
+    }
+});
+
+app.mount('#root');
